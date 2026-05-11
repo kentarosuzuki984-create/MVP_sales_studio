@@ -122,7 +122,7 @@ ESM/CJS 相互運用の既知パターン。Prisma Client の再生成後、work
 - **セキュリティ**: admin の `SESSION_SECRET` と DB パスワードはランダム・環境変数経由
 - **バックアップ**: `pg_dump MVP_business_message > backup.sql` を定期実行
 - **ログ**: worker ターミナル出力は可観測性のために別途ファイル / ログ基盤へ転送
-- **送信レート**: 大量送信前に `apps/worker/src/job-processor.ts` の `INTER_COMPANY_DELAY_MS` と 1 ジョブ上限 (`apps/admin/src/app/(authed)/send/actions.ts: MAX_COMPANIES = 50`) を調整
+- **送信レート**: 大量送信前に `apps/worker/src/job-processor.ts` の `INTER_COMPANY_DELAY_MS` と 1 ジョブ上限 (`apps/admin/src/app/(authed)/send/actions.ts: MAX_COMPANIES = 220`) を調整
 
 ## 7. 停止
 
